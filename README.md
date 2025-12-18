@@ -36,7 +36,7 @@ worldedit-bukkit-7.3.11.jar
 插件灵感来自油管的百万粉丝SpeedSilver创建的服务器Hoplite的游戏玩法 此插件经过几十局和朋友的游玩后，可以保证游戏体验很好，感谢!
 
 一些非必要的说明
-1.修改服务端根目录下的bukkit.yml  再最后复制：
+1.修改服务端根目录下的bukkit.yml  在文件最后换行粘贴：
 worlds:
   world:
     generator: Terra:OVERWORLD
