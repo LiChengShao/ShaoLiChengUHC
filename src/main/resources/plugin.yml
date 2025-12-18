@@ -1,0 +1,56 @@
+name: ShaoLiChengUHC
+version: '${project.version}'
+main: com.shaolian.uhc.Main
+api-version: '1.21'
+author: ShaoLiCheng
+depend: [WorldEdit, PlaceholderAPI, Chunky]  # 关键配置，确保WorldEdit先加载
+softdepend: [Vault, TAB, ItemsAdder]
+
+description: 一个UHC插件
+
+commands:
+  saverecipeyml:
+    description: 保存配方配置文件
+    usage: /saverecipeyml
+    permission: op
+
+  gotoneo:
+    description: 传送到NEO世界的(0,64,0)位置
+    usage: /gotoneo
+    permission: op
+
+  gotogameworld:
+    description: 传送到gameworld世界的(0,64,0)位置
+    usage: /gotogameworld
+    permission: op
+
+  gotoFinalWorldCopy:
+    description: 传送到FinalWorldCopy世界的某个位置
+    usage: /gotoFinalWorldCopy
+    permission: op
+
+  getchest:
+    description: 获得箱子
+    usage: /getchest
+    permission: op
+
+  placechest:
+    description: 获得放置箱子监听指令
+    usage: /placechest
+    permission: op
+
+  recipe:
+    description: Open the recipe GUI
+    usage: /recipe
+
+
+
+
+#permissions:
+#  manhunt.hunter:
+#    description: Allows a player to be a hunter
+#    default: op
+#  manhunt.runner:
+#    description: Allows a player to be a runner
+#    default: op
+

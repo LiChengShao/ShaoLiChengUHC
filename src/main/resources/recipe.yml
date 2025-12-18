@@ -1,0 +1,154 @@
+# 特殊配方GUI配置
+# --------------------------------
+# 使用 '&' 符号来表示颜色代码, 例如 '&c' 代表红色, '&a' 代表绿色。
+# 'slot' 是物品在GUI中的格子位置 (0-53对应一个54格的GUI, 0-35对应36格的GUI)。
+#
+# 如果物品来自 ItemsAdder (或其他类似插件):
+#   使用 'itemsadder_id' 来指定其ID。
+#   配置文件中的 'display_name', 'lore', 'amount' 可以覆盖 ItemsAdder 物品的默认值。
+#
+# 如果物品是普通的 Minecraft 物品:
+#   使用 'material' 指定其Minecraft材质。
+#   必须提供 'display_name', 'lore', 'amount'。
+
+gui:
+  title: "&6特殊配方" # GUI的标题(！不要改这个,如果想改请联系插件制作者)
+  size: 45          # GUI的大小 (必须是9的倍数)
+
+items:
+  # --- 熔炉稿 (来自 ItemsAdder) ---
+  furnace_pickaxe_from_config:
+    enabled: true              # 设置为 false 则不在GUI中显示此物品
+    slot: 10                   # 在GUI中的第10个格子 (从0开始数)
+    itemsadder_id: "test:furnace_pickaxe" # 你的 ItemsAdder 物品ID
+    # 可选: 如果你想覆盖 ItemsAdder 中物品的默认显示名称或描述
+    display_name: "&d熔炉稿"
+    lore:
+      - "&7直接获得矿物成品"
+    # amount: 1 # 通常工具是1, 但也可以设置
+
+  # --- 伐木斧 (来自 ItemsAdder) ---
+  tree_axe_from_config:
+    enabled: true
+    slot: 11
+    itemsadder_id: "test:tree_axe"
+
+  # --- 简易金苹果 (普通Minecraft物品) ---
+  easy_gold_apple_from_config:
+    enabled: true
+    slot: 12
+    material: GOLDEN_APPLE
+    display_name: "&6简易金苹果"
+    amount: 1
+
+  # --- 金头 (来自 ItemsAdder) ---
+  gold_head_from_config:
+    enabled: true
+    slot: 13
+    itemsadder_id: "test:gold_head"
+    display_name: "&6金头"
+    lore:
+      - "&6右键可直接使用。"
+      - "&6获得生命恢复和速度效果"
+
+
+  # --- 抗火药水 (来自 ItemsAdder 或普通物品) ---
+  fire_resistance_potion_from_config:
+    enabled: true
+    slot: 14
+    # 方案一: 来自 ItemsAdder
+    #itemsadder_id: "your_itemsadder_namespace:fire_potion"
+    # 方案二: 普通物品
+    material: POTION
+    display_name: "&c简易抗火药水"
+    lore:
+     - "&7提供抗火效果"
+    potion_data: # 这是一个更简洁的方式，如果药水类型是 Minecraft 内置的
+      base_type: "FIRE_RESISTANCE" # 比如: FIRE_RESISTANCE, SPEED, STRENGTH, REGENERATION
+      extended: false # 是否是延长版
+      upgraded: false # 是否是强化版 (例如 II 级)
+#    potion_effects:
+#      - "FIRE_RESISTANCE,6000,0" # 效果,持续时间(ticks),等级(从0开始)
+
+  # --- 简易铁砧 (普通Minecraft物品) ---
+  simple_anvil_from_config:
+    enabled: true
+    slot: 15
+    material: ANVIL
+    display_name: "&d简易铁砧"
+
+  # --- 简易箭 (普通Minecraft物品) ---
+  simple_arrows_from_config:
+    enabled: true
+    slot: 16
+    material: ARROW
+    display_name: "&d简易箭"
+    amount: 16
+
+  # --- 黑曜石 (普通Minecraft物品) ---
+  obsidian_from_config:
+    enabled: true
+    slot: 19
+    material: OBSIDIAN
+    display_name: "&8黑曜石" # 可选, 如果不写就是默认的"黑曜石"
+
+  # --- 追踪指南针 (普通Minecraft物品) ---
+  tracking_compass_from_config:
+    enabled: true
+    slot: 20
+    material: COMPASS
+    display_name: "§d追踪指南针" # 最好不要改追踪指南针的lore,改了很可能出现bug
+
+  # --- 附魔金苹果 (普通Minecraft物品) ---
+  enchanted_gold_apple_from_config:
+    enabled: true
+    slot: 21
+    material: ENCHANTED_GOLDEN_APPLE
+
+  # --- 狼骨头 (来自 ItemsAdder) ---
+  special_bone_from_config:
+    enabled: true
+    slot: 22
+    itemsadder_id: "test:special_bone"
+    display_name: "&d布鲁斯骨头"
+
+  # --- 收纳袋 (来自 ItemsAdder) ---
+  storage_bag_from_config:
+    enabled: true
+    slot: 23
+    itemsadder_id: "test:storage_bag"
+    display_name: "&d收纳袋"
+
+  # --- 短剑 (来自 ItemsAdder) ---
+  short_sword_from_config:
+    enabled: true
+    slot: 24
+    itemsadder_id: "test:short_sword"
+    display_name: "&d短剑"
+
+  # --- 火弩 (来自 ItemsAdder) ---
+  fire_crossbow_from_config:
+    enabled: true
+    slot: 25
+    itemsadder_id: "test:fire_crossbow"
+    display_name: "&d火弩"
+
+  # --- 图腾 (普通Minecraft物品) ---
+  totem_from_config:
+    enabled: true
+    slot: 28
+    material: TOTEM_OF_UNDYING
+
+  # --- 下一页按钮 (普通Minecraft物品) ---
+  next_page_button:
+    enabled: true
+    slot: 44
+    material: FEATHER
+    display_name: "&d下一页"
+    lore:
+      - "&7点击查看更多配方"
+    # 如果需要通过点击事件识别这个按钮, 可以考虑添加一个 PersistentDataContainer 标签
+    # persistent_data:
+    #   type: STRING # 或 BOOLEAN, INTEGER 等
+    #   key: "gui_action"
+    #   value: "next_page"

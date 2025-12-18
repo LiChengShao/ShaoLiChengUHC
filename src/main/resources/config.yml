@@ -1,0 +1,3 @@
+recharge:
+  item: GOLD_INGOT  # 充值物品类型
+  amount: 100.0     # 每次充值获得的金额
