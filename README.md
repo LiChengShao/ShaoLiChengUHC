@@ -1,3 +1,5 @@
+注:该版本是旧版，最新版未开源
+
 # ShaoLiChengUHC
 This is a Spigot/Paper Minecraft plugin: a UHC (Hardcore Survival Battle Royale) game plugin inspired by the Hoplite UHC gamemode.
 
